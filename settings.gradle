@@ -1,0 +1,8 @@
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'springboot-multi'
+
+include 'springboot-multi-common', 'springboot-multi-api', 'springboot-multi-web' , 'springboot-multi-OAuth2'

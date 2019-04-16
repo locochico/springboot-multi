@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/localwrkdb
+    username: root
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
+mybatis:
+  type-aliases-package: com.skmns.common.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration-properties:
+    aggressiveLazyLoading: false
+    lazyLoadingEnabled: true
+    lazyLoadTriggerMethods: ''
+    mapUnderscoreToCamelCase: true
+
+logging:
+  path: c:/dev/log/spring
+  file: log-file
+  level:
+    root: INFO
+    com.skmns.common.mapper: TRACE
