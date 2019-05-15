@@ -1,9 +1,7 @@
-package com.skmns.api.controller;
+package com.skmns.web.contoller;
 
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,10 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.skmns.api.service.UserService;
 import com.skmns.common.model.User;
-
+import com.skmns.web.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -75,7 +71,7 @@ public class UserController {
 	}
 
 	@PutMapping("{id}")
-	public String putUserEdit(@PathVariable int id, @ModelAttribute @Valid User user, BindingResult bindingResult) {
+  public String putUserEdit(@PathVariable String id, @ModelAttribute @Valid User user, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return "users/edit";
 		}

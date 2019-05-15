@@ -10,7 +10,7 @@
         select * from user where id = #{id}
     </select>
     <select id="selectAuthenticate" parameterType="String" resultType="user">
-        select * from user where name = #{name}
+        select * from user where id = #{id}
     </select>
     <insert id="insert">
         insert into user (name) values (#{name})

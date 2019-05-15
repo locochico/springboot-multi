@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Alias("user")
 public class User {
-	private int id;
+  private String id;
   private String name;
   private String password;
 }
